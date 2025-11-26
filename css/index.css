@@ -117,6 +117,18 @@ hr {
     width: calc((24px + 5rem) * 6);
 }
 
+.roundedbottom a {
+    width: fit-content;
+    height: 100%;
+
+    color: white;
+    text-decoration: none;
+}
+
+.roundedbottom a:hover {
+    text-decoration: underline;
+}
+
 .horizontal-center {
     width: calc((24px + 5rem) * 6);
     position: fixed;
@@ -127,10 +139,24 @@ hr {
 
 .bottomitem {
     display: flex;
-    width: auto;
-    margin: auto;
+    justify-content: center;
+    align-items: center;
+    
+    width: fit-content;
+    height: 100%;
+    border-radius: 40px;
+
+    padding-left: 2em;
+    padding-right: 2em;
+
+    margin-top: auto;
+    margin-bottom: auto;
     margin-left: 0;
     margin-right: 0;
+}
+
+.bottomitem:hover {
+    background-color: rgb(180, 180, 180);
 }
 
 .bottomitem svg {
@@ -141,26 +167,6 @@ hr {
 .bottomitem.github svg {
     width: 38px;
     height: 38px;
-}
-
-.bottomitem a {
-    text-decoration: none;
-    color: white;
-    padding: 0 2rem;
-}
-
-.roundedbottom a:hover {
-    width: auto;
-    text-decoration: underline;
-    border-radius: 40px;
-    background-color: rgb(180, 180, 180);
-    display: block;
-    position: sticky;
-    padding: 25px 2rem;
-}
-
-.github a:hover {
-    padding: 18px 2rem;
 }
 
 .text-center {
