@@ -114,7 +114,20 @@ hr {
     position: sticky;
     bottom: 2rem;
     border-radius: 40px;
-    width: calc((24px + 5rem) * 6);
+    width: 100%;
+    /* width: calc((24px + 5rem) * 6); */
+}
+
+.roundedbottom a {
+    width: fit-content;
+    height: 100%;
+
+    color: white;
+    text-decoration: none;
+}
+
+.roundedbottom a:hover {
+    text-decoration: underline;
 }
 
 .horizontal-center {
@@ -127,10 +140,24 @@ hr {
 
 .bottomitem {
     display: flex;
-    width: auto;
-    margin: auto;
+    justify-content: center;
+    align-items: center;
+    
+    width: fit-content;
+    height: 100%;
+    border-radius: 40px;
+
+    padding-left: 2em;
+    padding-right: 2em;
+
+    margin-top: auto;
+    margin-bottom: auto;
     margin-left: 0;
     margin-right: 0;
+}
+
+.bottomitem:hover {
+    background-color: rgb(180, 180, 180);
 }
 
 .bottomitem svg {
@@ -141,26 +168,6 @@ hr {
 .bottomitem.github svg {
     width: 38px;
     height: 38px;
-}
-
-.bottomitem a {
-    text-decoration: none;
-    color: white;
-    padding: 0 2rem;
-}
-
-.roundedbottom a:hover {
-    width: auto;
-    text-decoration: underline;
-    border-radius: 40px;
-    background-color: rgb(180, 180, 180);
-    display: block;
-    position: sticky;
-    padding: 25px 2rem;
-}
-
-.github a:hover {
-    padding: 18px 2rem;
 }
 
 .text-center {
@@ -179,7 +186,7 @@ hr {
     height: 14rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 576px) {
     .vertical-center {
         min-height: 88%;
         min-height: 88vh;
@@ -219,48 +226,26 @@ hr {
         border-radius: 50%;
     }
 
+    .horizontal-center {
+        width: 100vw;
+    }
+
     .roundedbottom {
-        height: 2.5rem;
-        background: rgb(20, 20, 20);
-        color: rgb(220, 220, 220);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: sticky;
-        bottom: 1rem;
-        border-radius: 1.25rem;
-        margin: auto;
-        width: calc((3.4rem) * 7);
+        height: 64px;
+
+        padding-left: 1em;
+        padding-right: 1em;
     }
 
     .roundedbottom a {
-        padding: 0 0;
-    }
-
-    .roundedbottom a:hover {
-        display: block;
-        position: sticky;
-        padding: 0 0;
-        background-color: inherit;
+        width: 100%;
     }
 
     .bottomitem {
-        width: 1.2rem;
-        /* padding: 8px 0.9rem; */
-    }
+        width: 100%;
 
-    .bottomitem a {
-        padding: 0 0;
-    }
-
-    .bottomitem svg {
-        width: 1.2rem;
-        height: auto;
-    }
-
-    .bottomitem.github svg {
-        width: 1.7rem;
-        height: auto;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     /* .github a:hover {
